@@ -16,7 +16,7 @@ var mongoose = require('mongoose');
 var models = require('./models/models.js');//mongoose schemas
 
 if (app.get('env') === 'production') {
-    mongoose.connect("mongodb://admin:p%40ssw0rd@ds019990.mlab.com:19990/bawel-test");
+    mongoose.connect("mongodb://admin:password@ds019990.mlab.com:19990/bawel-test");
 }
 else{
     mongoose.connect('mongodb://localhost/test-chirp');             
