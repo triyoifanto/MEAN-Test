@@ -4,19 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var bcrypt = require('bcrypt-nodejs');
+//to bootstrap pasport
 var passport = require('passport');
-//var LocalStrategy = require('passport-local').Strategy;
 //session middleware standing between client and rout handler
 var session = require('express-session');
-//to bootstrap pasport
-//var passport = require('passport');
 var app = express();
 
 //mongo db
 var mongoose = require('mongoose');
 //connection to mongodb
-var models = require('./models/models.js');                 //mongoose schemas
+var models = require('./models/models.js');//mongoose schemas
 
 if (app.get('env') === 'production') {
     mongoose.connect("mongodb://admin:p@ssw0rd@ds019990.mlab.com:19990/bawel-test");
@@ -28,9 +25,6 @@ else{
 var index = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
-
-var app = express();
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
