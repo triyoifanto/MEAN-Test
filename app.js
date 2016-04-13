@@ -4,13 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var bcrypt = require('bcrypt-nodejs');
+//var bcrypt = require('bcrypt-nodejs');
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+//var LocalStrategy = require('passport-local').Strategy;
 //session middleware standing between client and rout handler
 var session = require('express-session');
 //to bootstrap pasport
 //var passport = require('passport');
+var app = express();
 
 //mongo db
 var mongoose = require('mongoose');
